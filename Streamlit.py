@@ -34,7 +34,15 @@ if temp== 'Select from dropdown':
     pic = st.selectbox('Choices:', images)
     st.write("**You selected:**")
     st.image(pic,width=None)
-    t=[]
+    z = st.slider('Select Number of Similar Products:', 1, 9, 5)
+    st.write("-------------------------------------------------------------------------------------------------")
+    st.subheader("Output:")
+    st.write('**Similar Products:**')
+    for index, row in df.iterrows():
+        if row['0']==pic:
+            while n < z+1:
+                st.image(row[n], use_column_width=None, caption=row[n])
+                n+=1
 elif temp == 'Upload a file':
     try:
         pic=[]
