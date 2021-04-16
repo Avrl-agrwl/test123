@@ -1,23 +1,8 @@
 import streamlit as st
 import pandas as pd
 from skimage.io import imread
-import tensorflow as tf
-from tensorflow.keras.applications.vgg19 import preprocess_input
-from tensorflow.keras.models import Model
-print(tf.__version__)
 
-import matplotlib.pyplot as plt
-import numpy as np
-from tqdm import tqdm
 
-import glob
-import ntpath
-import cv2
-import pathlib
-from sklearn.metrics.pairwise import cosine_similarity
-import scipy as sc
-import elasticsearch
-from elasticsearch import Elasticsearch
 
 #########################################################
 st.sidebar.subheader("SELECT SEARCH METHOD")
