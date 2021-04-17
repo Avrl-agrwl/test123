@@ -7,11 +7,11 @@ from skimage.io import imread
 #########################################################
 st.sidebar.subheader("SELECT SEARCH METHOD")
 add_selectbox = st.sidebar.radio("  ",
-    ("Image Similarilty", "Spotify annoy", "FAISS")
+    ("Cosine Image Similarilty", "Spotify annoy", "FAISS")
 )
 
-if add_selectbox == 'Image Similarilty' :
-        st.title("Similarity Search")
+if add_selectbox == 'Cosine Image Similarilty' :
+        st.title("Cosine Similarity Search")
         st.write("-------------------------------------------------------------------------------------------------")
         df=pd.read_csv('similarity_search.csv')
             
